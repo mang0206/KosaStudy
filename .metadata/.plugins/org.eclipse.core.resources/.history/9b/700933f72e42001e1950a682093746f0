@@ -1,0 +1,13 @@
+package day6_study01;
+
+public class MethodLab5 {
+	public static int getRandom(int... num) {
+		
+		return 0;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

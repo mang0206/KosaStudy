@@ -1,0 +1,36 @@
+package day3_study02;
+
+public class ControlLab3 {
+
+	public static void main(String[] args) {
+		while(true) {
+			int ran = (int)(Math.random() * 120) + 1;
+			String s = "";
+			String s2 = "";
+			
+			boolean flag = false;
+			if(ran < 50) {
+				if(ran % 10 == 3) {
+					flag = true;
+					s2 = new String("*듀크팀*");
+				}
+				s = new String("50 미만");
+				
+			} else if (ran <= 80) {
+				if ( ran >= 70 & ran < 80) {
+					flag = true;
+					s2 = new String("*턱시팀*");
+				}
+				s = new String("50 이상 80 이하");
+			} else if (ran <= 100) {
+				continue;
+			} else
+				break;
+			
+			System.out.printf("%d : %s\n", ran, s);
+			if (flag)
+				System.out.printf("%d : %s\n", ran, s2);
+		}
+	}
+
+}

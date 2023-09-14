@@ -1,0 +1,10 @@
+package Jdbcexam_study01;
+
+public class CheckEmpLab {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

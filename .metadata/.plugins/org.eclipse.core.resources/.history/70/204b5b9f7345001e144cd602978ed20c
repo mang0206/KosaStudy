@@ -1,0 +1,23 @@
+package exercise;
+
+class Student{
+	private String number;
+	private String major;
+	
+	public Student() { }
+	
+	public Student(String name, int age, int height, int weight, 
+					String number, String major) {
+		super(name, age, height, weight);
+		
+	}
+}
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

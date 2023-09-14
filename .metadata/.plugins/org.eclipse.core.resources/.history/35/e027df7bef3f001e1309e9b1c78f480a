@@ -1,0 +1,25 @@
+package day3_study02;
+
+public class ControlLab3 {
+
+	public static void main(String[] args) {
+		while(true) {
+			int ran = (int)(Math.random() * 120) + 1;
+			String s;
+			switch(ran/10) {
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				if(ran % 10 == 3)
+					s = new String("*듀크팀*");
+				else
+					s = new String("미만");
+			}
+			
+			
+		}
+
+	}
+
+}

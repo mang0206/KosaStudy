@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;day12_study01.LinkedListLab&apos; to &apos;LinkedListLab1&apos;&#x0D;&#x0A;- Original project: &apos;javaedu&apos;&#x0D;&#x0A;- Original element: &apos;day12_study01.LinkedListLab&apos;&#x0D;&#x0A;- Renamed element: &apos;day12_study01.LinkedListLab1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LinkedListLab&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;day12_study01{LinkedListLab.java[LinkedListLab" matchStrategy="1" name="LinkedListLab1" qualified="false" references="true" similarDeclarations="false" stamp="1693538949969" textual="false" version="1.0"/>
+</session>
