@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+	<script>
+        write("자바스크립트 실습(4)","h1");
+        var sum = function(num){
+            if(num == "" || num == null){
+                return;
+            }
+            let s= 0;
+            for(let i=1; i<=num; i++){
+                s += i;
+            }
+            return s;
+        }
+
+        for(let i=0; i<5; i++){
+            let ran = Math.floor(Math.random() * 6);
+            let result;
+
+            if(ran){
+                result = sum(ran);
+            } else {
+                result = sum();
+            }
+            result && write("호출 결과값" + result, "h2");
+            result || write("결과값이 없어요!!", "h2");
+        }
+    </script>
+    <style>
+        h1 {
+            color : rgb(86, 170, 238);
+        }
+    </style>
+</body>
+</html>
