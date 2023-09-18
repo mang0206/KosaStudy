@@ -20,7 +20,7 @@ nav {
 }
 
 a {
-    margin :0 50px;
+    margin :0 100px;
     color :beige;
     text-decoration-line: none;
     /* font-size: small; */
@@ -34,27 +34,73 @@ a:hover{
 section {
 	width: 70%;
 	height: 200%;
-	background-color: skyblue;
     margin : auto;
 }
 
 article {
-	width: 80%;
+	width: 100%;
 	/* height: 200px; */
-	background-color: magenta;
 	margin: 10px auto;
     border-radius : 10px;
     padding: 15px;
+    border-style: dotted;
+    border-color: blueviolet;
 }
 
 h2 {
     font-size: 1.2em;
     padding-bottom: 10px;
 }
+
+#h2_1 {
+    color : magenta;
+}
+
+#h2_2 {
+    color : blue;
+}
+
+#h2_3 {
+    color : green;
+}
+
+#h2_span{
+    color : magenta;
+}
+
+table {
+    border-color: #bbdefb;
+}
+th {
+    background-color: #bbdefb;
+}
+
+figure {
+    text-align: center;
+    margin-top : 5px;
+}
+
+#town_img {
+    width: 90%;
+}
+#town_img:hover {
+    opacity: 0.5;
+}
+
+aside {
+    text-align: center;
+}
+
+video {
+    width: auto;
+    height: auto;
+    margin: 10px 50px;
+}
+
 footer {
-	width: 70%;
-	height: 50px;
-	clear: both;
-    margin : aotu;
-	background-color: lightgray;
+	width: 100%;
+	line-height: 50px;
+    text-align: center;
+	background-color: rgb(58, 57, 57);
+    color:blanchedalmond;
 }
