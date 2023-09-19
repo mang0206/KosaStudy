@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        var clac = function(){
+            if(!arguments.length)
+                return 0;
+            
+            let sum = 0;
+            for(let i of arguments){
+                if(isNaN(i))
+                    return "숫자만 전달하세요"
+                sum += Number(i);
+            }
+            return sum;
+        }
+
+        write(clac(), "h3");
+        write(clac(10, 20, '30'), "h3");
+        write(clac(10, '가나다', 20), "h3");
+        write(clac(1,2,3,4,5), "h3");
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        var getKorDay = function(y,m,d){
+            let check = Number(y) + Number(m) + Number(d);
+            if( check == null || check == '' || isNaN(check))
+			    return
+
+            let day = new Date(y, m-1, d);
+            let get_day = day.getDay();
+            let day_result;
+            if(get_day==0) day_result = "일";
+            else if(get_day==1) day_result = "월";
+            else if(get_day==2) day_result = "화";
+            else if(get_day==3) day_result = "수";
+            else if(get_day==4) day_result = "목";
+            else if(get_day==5) day_result = "금";
+            else  day_result = "토";
+
+            return day.getFullYear() + "년 " + (day.getMonth()+1) + "월 " +
+             day.getDate() + "일은 " + day_result + "요일 입니다." ;
+        }
+
+        let y = window.prompt("년을 입력하세요");
+        let m = window.prompt("월을 입력하세요");
+        let d = window.prompt("일을 입력하세요");
+
+        let result = getKorDay(y,m,d)
+        result && writeColor(result, "h1", "blue");
+        result || writeColor("결과 없음", "h1", "blue");
+    </script>
+</body>
+</html>

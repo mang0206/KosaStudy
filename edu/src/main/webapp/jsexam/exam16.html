@@ -19,6 +19,7 @@ document.write("<hr>");
 
 var ary3 = [30, 11, 5, 27, 9]
 document.write(ary3 + "<br>");
+document.write(ary3.sort() + "<br>");
 document.write(ary3.sort(function(a, b){ return a - b;}) + "<br>");
 document.write(ary3.sort(function(a, b){ return b - a;}) + "<br>");
 document.write("<hr>");
@@ -28,6 +29,7 @@ ary5.push(100);
 ary5.push(200);
 ary5.push(500);
 document.write(ary5 + "<br>");
+ary5.pop();
 ary5[7] = 1000;
 document.write(ary5 + "<br>");
 document.write(ary5.length + "<br>");
