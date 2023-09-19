@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        function printObject(p){
+            if(typeof p !="object")
+                return;
+
+            writeColor(p.msg, p.tag, p.color);
+        }
+
+
+        let cls = [["h1", "blue", "파랑"],["h2", "red", "빨강"],["h3", "green", "초록"],
+                    ["h4", "black", "검정"],["h1", "crimson", "크림슨"]]
+        for(let i = 0; i<5; i++){
+            printObject({tag:cls[i][0], color:cls[i][1], msg:cls[i][2]}) 
+        }
+
+    </script>
+</body>
+</html>

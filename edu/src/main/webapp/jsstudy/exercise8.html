@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        // var printH1 = function (content){
+        function printH1(content){
+            write(content, "h1");
+        }
+        function printH4(content){
+            write(content, "h4");
+        }
+
+        var apply = function(arr, func){
+            if (!Array.isArray(arr) || typeof func != "function") {
+                console.log("아규먼트 오류");
+                return false;
+            }
+            for(let i of arr)
+                func(i);
+            return true;
+        }
+
+        let arr = [];
+
+        let input = true;
+        while(input){
+            input = window.prompt("데이터를 입력하세요");
+            input && arr.push(input);
+        }
+
+        let ran = Math.floor(Math.random() * 9) + 1;
+        let check;
+        if(ran == 1 || ran == 4 || ran == 6)
+            check =apply(arr, printH1);
+        else if(ran == 3 || ran == 5 || ran ==7)
+            check = apply(arr, printH4);
+        else if(ran == 8 || ran == 9)
+            check = apply("ㅋㅋ", printH1);
+        else
+            check = apply(arr);
+
+        check && window.alert("처리 성공");
+        check || window.alert("처리 실패");
+
+    </script>
+</body>
+</html>
