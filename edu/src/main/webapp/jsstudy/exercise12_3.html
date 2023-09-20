@@ -11,8 +11,11 @@
     <button id="blue">파랑색</button>
     <button id="yellow">노랑색</button>
     <hr>
-    <h3>오늘은 9월 20일 입니다.</h3>
+    <script src="util.js"></script>
     <script>
+        let date = new Date();
+        write(`오늘은 ${date.getMonth()+1}월 ${date.getDate()}일입니다`, "h3");
+        
         let dom = document.getElementsByTagName('button');;
         function changeColor() {
             document.getElementsByTagName('h3')[0].style.color = this.id;
