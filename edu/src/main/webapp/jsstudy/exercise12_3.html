@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>이벤트 모델-인라인</h1>
+    <hr>
+    <button onclick="updateColor('red');">빨강색</button>
+    <button onclick="updateColor('blue');">파랑색</button>
+    <button onclick="updateColor('yellow');">노랑색</button>
+    <hr>
+    <h3>오늘은 9월 20일 입니다.</h3>
+    <script>
+        function updateColor(clr) {
+            document.getElementsByTagName('h3')[0].style.color = clr;
+        }
+    </script>
+</body>
+</html>

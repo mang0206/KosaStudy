@@ -25,7 +25,7 @@
 	writeNewLine(dom.textContent);
 	window.setTimeout(function() {
 		const kday = ['일','월', '화', '수', '목', '금', '토'][new Date().getDay()];
-		dom.textContent =`오늘은 ${kday}요일`; // ES6에서 추가된 구문 : 템플릿 리터럴
+		dom.textContent +=`오늘은 ${kday}요일`; // ES6에서 추가된 구문 : 템플릿 리터럴
 		dom.style.color ="red";
 		dom.style.backgroundColor ="lime"; // background-color, font-weight -> fontWeight
 	}, 5000);
