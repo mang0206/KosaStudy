@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script src="util.js"></script>
+    <script>
+        function DayInfo(name, year, month, day) {
+            this.name = name;
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+
+        DayInfo.prototype.getTotalDates = function() {
+            let day = new Date();
+            let birth_day = new Date(this.year, this.month-1, this.day);
+            let time = day.getTime() - birth_day.getTime();
+
+            let day_result = Math.floor(new Date(time).getTime() / 1000 / 24 / 3600);
+            return this.name + "님은 태어난지 " + day_result + "일 되었어요."
+        };
+
+        DayInfo.prototype.getKorDay = function() {
+            let day = new Date(this.year, this.month-1, this.day);
+            let day_result = ["일", "월", "화", "수", "목", "금", "토"];
+
+            return this.name + "님은 " + day_result[day.getDay()] + "요일에 태어났어요." ;
+        };
+
+        let day_info = [new DayInfo("김", 2000, 6, 30), new DayInfo("이", 1997, 2, 6), new DayInfo("박", 2023, 9, 19)];
+
+        for(let i=0; i<day_info.length; i++){
+            write(day_info[i].getTotalDates(), "h3");
+            write(day_info[i].getKorDay(), "h3");
+        }
+            
+
+    </script>
+</body>
+</html>

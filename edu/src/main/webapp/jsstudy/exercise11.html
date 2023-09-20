@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <script>
+        let ran = Math.floor(Math.random() * 3) + 1;
+        let answer = window.confirm("이동하나요?");
+        let hrf;
+        switch(ran){
+            case 1:
+                hrf = "http://www.daum.net"
+                break;
+            case 2:
+                hrf = "http://www.naver.com"
+                break;
+            default:
+                hrf = "http://www.google.com"
+        }
+        if(answer){
+            let wd = window.open(hrf,'','width=1500, height=1000');
+            wd.moveTo(150,150);
+            wd.resizeTo(screen.width/1.3, screen.height/1.3)
+        }
+
+    </script>
+</body>
+</html>
