@@ -20,7 +20,11 @@
                 hrf = "http://www.google.com"
         }
         if(answer){
-            let wd = window.open(hrf,'','width=1500, height=1000');
+            let wd = window.open(hrf,'','');
+            wd.moveTo(150,150);
+            wd.resizeTo(screen.width/1.3, screen.height/1.3);
+        } else {
+            let wd = window.open('../first.html', '', '');
             wd.moveTo(150,150);
             wd.resizeTo(screen.width/1.3, screen.height/1.3)
         }
