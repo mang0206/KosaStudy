@@ -13,12 +13,14 @@
     <hr>
     <h3>오늘은 9월 20일 입니다.</h3>
     <script>
-        let dom = document.getElementById('red');
-        function changeColor(e) {
-            console.log(e)
-            document.getElementsByTagName('h3')[0].style.color = 'red';
+        let dom = document.getElementsByTagName('button');;
+        function changeColor() {
+            document.getElementsByTagName('h3')[0].style.color = this.id;
         }
-        dom.onclick = changeColor;
+        for(let i in dom)
+            if(!isNaN(i))
+                dom[i].onclick = changeColor;
+        
     </script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    #atc1 {
+        color :blueviolet;
+    }
+
+    #h2_1:hover{
+        opacity: 0.5;
+    }
+    section {
+        text-align: center;
+    }
+    button {
+        height : 30px;
+        width : 50px;
+        margin : 3px 5px;
+        border-radius: 10px;
+        border-color: brown;
+    }
+    p {
+        color :darkred;
+        font-weight: bolder;
+    }
+</style>
+</head>
+<body>
+    <section>
+        <article id="atc1">
+            <h2 id="h2_1">구구단</h2>
+        </article>
+        <article id="atc2"></article>
+        <article id="atc3"></article>
+    </section>
+    <script src="util.js"></script>
+    <script>
+        // 버튼 생성
+        atc2 = document.getElementById("atc2");
+        for(let i=1; i<=9; i++)
+            atc2.innerHTML += `<button id=btn${i}>${i}단</button>`;
+
+        // 버튼 이벤트 추가
+        let dom = document.getElementsByTagName('button');
+        function writeGuGu() {
+            // 구구단 생성
+            let gugu = Number(this.id.substring(3));
+            atc3 = document.getElementById("atc3");
+            atc3.innerHTML = '';
+            for(let i=1; i<=9; i++)
+                atc3.innerHTML += `<p> ${gugu} * ${i} = ${gugu * i}</p>`;
+        };
+
+        for(let i in dom)
+            if(!isNaN(i))
+                dom[i].addEventListener("click", writeGuGu);
+
+        dom = document.getElementsByTagName('h2');
+        function goSite() {
+            // 구구단 생성
+            location.href = "https://ko.wikipedia.org/wiki/구구단";
+        };
+        dom[0].addEventListener("click", goSite);
+    </script>
+</body>
+</html>
