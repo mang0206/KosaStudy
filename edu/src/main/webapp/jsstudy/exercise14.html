@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    section {
+        text-align: center;
+    }
+    #atc1 {
+        font-size: 2em;
+        color:gold;
+    }
+    #btn_div {
+        width: 330px;
+        height: 100px;
+        margin:auto;
+        border-style:inset;
+        border-radius: 10px;
+        border-color:blueviolet;
+        box-shadow: 5px 5px;
+    }
+    button {
+        margin:33px;
+        background-color: blue;
+        color :aliceblue;
+    }
+    img {
+        width: 500px;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+    <section>
+        <article id="atc1">
+            <h1>이벤트 처리 실습</h1>
+        </article>
+        <hr>
+        <article id="atc2">
+            <div id="btn_div"></div>
+        </article>
+        <hr>
+        <article id="atc3"></article>
+    </section>
+    <script src="util.js"></script>
+    <script>
+        let wetter = ["맑음", "흐림", "비"]
+        let id_tag = ['sun', 'cloud', 'rain']
+        // 버튼 생성
+        let atc2 = document.getElementById("btn_div");
+        for(let i=0; i<3; i++)
+            atc2.innerHTML += `<button id=${id_tag[i]}>${wetter[i]}</button>`;
+
+        // 버튼 이벤트 
+        function showImg(e) {
+            // console.log(e);
+            // console.log(e.target.nodeName);
+            if(e.target.nodeName == "BUTTON") {
+                let atc3 = document.getElementById("atc3");
+                atc3.innerHTML = `<img src="../images/${e.target.id}.png">`;
+            }
+        };
+
+        atc2.addEventListener("click", showImg);
+
+    </script>    
+</body>
+</html>

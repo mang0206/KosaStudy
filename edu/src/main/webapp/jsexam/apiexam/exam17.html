@@ -45,7 +45,7 @@ function clickHandler() {
 function displayAlert(e) {
 	let msg = `${e.currentTarget.nodeName} 태그의 ${e.type} 이벤트 핸들러 수행~~`;	
 	window.alert(msg);
-	//e.stopPropagation();
+	e.stopPropagation();
 }
 window.addEventListener("load", clickHandler);
 </script>
