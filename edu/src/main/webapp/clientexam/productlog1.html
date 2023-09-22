@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    section{
+        text-align: center;
+    }
+    img {
+        margin: 10px;
+        padding : 20px;
+        width: 150px;
+        height: auto;
+        border: solid;
+        border-color: black;
+        border-width: 1px;
+        box-shadow: 5px 5px gray;
+    
+    }
+</style>
+</head>
+<body>
+    <section>
+        <article>
+            <h1>원하는 상품을 클릭해 주세요!! 마구마구^^</h1>
+        </article>
+        <hr>
+        <article>
+            <div id="img_div"></div>
+        </article>
+    </section>
+
+    <script>
+        let imgDiv = document.getElementById("img_div");
+        let img_srf;
+        for(let i=1; i<=10; i++) {
+            img_srf = `<img src = ../images/${i}.jpg>`;
+            // imgDiv.innerHTML += `<a href=localhost:8088/edu/basket1?pid=p${i}>${img_srf}</a>`;
+            imgDiv.innerHTML += `<a href=/edu/basket1?pid=p${i}>${img_srf}</a>`;
+        }
+    </script>
+</body>
+</html>
