@@ -17,6 +17,7 @@ public class FirstServlet extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		out.print("<h1>안녕? Servlet!!</h1>");
+//		out.print("<style>h1{color:red}</style>");
 		out.close();
 	}
 
