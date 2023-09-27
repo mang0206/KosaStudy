@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var random = Math.floor(Math.random() * 3) + 1;
+console.log(random);
+let link = ["http://www.daum.net","http://www.naver.com","http://www.google.com"];
+if (window.confirm("이동?"))
+	window.open(link[random-1]);
+else
+	location.href = "/edu/first.html";
+
+</script>
+</body>
+</html>

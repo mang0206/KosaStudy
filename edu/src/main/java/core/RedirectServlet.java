@@ -11,7 +11,7 @@ public class RedirectServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("RedirectServlet 수행");
 		response.sendRedirect("/edu/clientexam/output.html");
-//		response.sendRedirect("http://www.naver.com/");
+		//response.sendRedirect("http://www.naver.com/");
 	}
 }
 

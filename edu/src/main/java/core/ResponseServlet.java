@@ -18,13 +18,14 @@ public class ResponseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String uri = request.getRequestURI();
-		String filename = "";
 		System.out.println(uri);
 		System.out.println(getServletContext().getServerInfo());
 		System.out.println(getServletContext().getContextPath());
 		System.out.println(getServletContext().getRealPath("/"));
 		System.out.println(getServletContext().getMajorVersion());
 		System.out.println(getServletContext().getMinorVersion());
+		
+		String filename = "";
 		String contentType = "";
 		if (uri.endsWith("getHTML")) {
 			filename = getServletContext().getRealPath("/")+"/clientexam/sample.html";	

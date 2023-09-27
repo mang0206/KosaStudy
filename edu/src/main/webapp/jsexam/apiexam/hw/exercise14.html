@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1 {
+	color : white;
+	text-shadow : 2px 2px 6px blue;
+	text-align: center;
+	}
+	div {
+	text-align: center;
+	background-color : blue;
+	padding-left : 25%;
+	}
+	
+</style>
+
+</head>
+<body>
+<h1>이벤트 처리 실습</h1>
+<hr>
+<div id="div">
+<button value="sun">맑음</button>
+<button value="cloud">흐림</button>
+<button value="rain">비</button>
+</div>
+<hr>
+<img width="400px">
+
+<script>
+const container = document.getElementsByTagName("div")[0];
+container.addEventListener("click",Weather);
+const img = document.getElementsByTagName("img")[0];
+
+function Weather(e) {
+	console.log(e);
+	console.log(e.target.id);
+	e.target.id == "div" ? img.src = "" : img.src = "/images/"
+			+ e.target.value+".png";
+}	
+
+</script>
+</body>
+</html>

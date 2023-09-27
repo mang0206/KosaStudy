@@ -22,7 +22,7 @@ const persons = [
     new Person("고길동",78,"서울")
 ];
 const plist = persons.map(function (p) {
-    return `${p.name}(${p.point})`;
+    return `${p.name}(${p.point})`; // ES6 : 템플릿리터럴 p.name+"("+p.point+")"
   });
 writeColor(plist, 'h3', 'blue');
 

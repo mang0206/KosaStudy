@@ -9,6 +9,6 @@
 <body>
 <h1>첫 번째 JSP 테스트 예제</h1>
 <hr>
-<h3>오늘 날짜 : <%=java.time.LocalDate.now() %></h3>
+<h3>오늘 날짜 : <%= java.time.LocalDate.now() %></h3>
 </body>
 </html>

@@ -9,7 +9,7 @@ function initiate(){
 }
 function dragged(e){
   var code='<img src="'+source.getAttribute('src')+'">';
-  e.dataTransfer.setData('Text', code);
+  e.dataTransfer.setData('Text', code); 
 }
 function dropped(e){
   e.preventDefault();

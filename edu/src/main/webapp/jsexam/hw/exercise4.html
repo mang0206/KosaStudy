@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="util.js"></script>
+<script>
+writeColor("자바스크립트 실습(4)","h1","blue");
+function sum(num){
+	var result = 0;
+	
+	for (var i = 1; i<=num; i++){
+		result += i
+	}
+	return result
+}
+
+var num = Math.random(random*5);
+sum(num);
+sum(num);
+sum(num);
+sum(num);
+sum(num);
+write("호출 결과값 : "+sum(num), "h2");
+
+</script>
+</body>
+</html>

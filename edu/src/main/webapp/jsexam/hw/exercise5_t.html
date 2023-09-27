@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {
+            color:blue;
+        }
+        h2 {
+            color : red;
+        }
+        ul {
+            list-style: circle;
+        }
+    </style>
+</head>
+<body>
+    <script src="./util.js"></script>
+    <script>
+        write("자바스크립트 실습(5)", "h1");   
+        //var result = 0;
+
+        function getMaxValue(arr) {
+            let result = 0;
+            result = arr[0];
+            for (var i in arr) {
+                
+                if (result < arr[i]) {
+                    result = arr[i];
+                }
+            }
+            return result;
+        }
+        function getMinValue(arr) {
+            let result = 0;
+            result = arr[0];
+            for (var i in arr) {
+                if (result > arr[i]) {
+                    result = arr[i];
+                }
+            }
+            return result;
+        }
+        /*function getSum(arr) {
+            let result = 0;
+            for (var i in arr) {
+
+                result += arr[i];
+            }
+            return result;
+        }*/
+        
+        function getSum(arr) {
+        	let lt = 0;
+        	for (var i=0; i<arr.length; i++){
+        		lt += arr[i];		
+        	}
+        	return lt;
+        }
+        function getCountOddNum(arr) {
+            let result = 0;
+            for (var i in arr) {
+                if (arr[i] % 2 == 1) {
+                    result++;
+                }
+            }
+            return result;
+        }
+        function getCountEvenNum(arr) {
+            let result = 0;
+            for (var i in arr) {
+                if (arr[i] % 2 == 0) {
+                    result ++;
+                }
+            }
+            return result;
+        }
+        var arr = [10, 5, 7, 21, 4, 8, 18];
+        write("모든 원소의 합 : " + getSum(arr), "h2");
+        document.write("<ul>");
+        write("최대값 : "+getMaxValue(arr), "li");
+        write("최소값 : "+getMinValue(arr), "li");
+        write("짝수의 갯수 : "+getCountEvenNum(arr), "li");
+        write("홀수의 갯수 : "+getCountOddNum(arr), "li");
+        document.write("</ul>");
+    </script>
+</body>
+</html>

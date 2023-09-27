@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1 {
+		color : navy;
+		font-size : 30px;
+	}
+	
+	hr {
+		
+		border : 1px dotted black;
+	}
+	h2 {
+		color : red;
+		font-size : 20px;
+	}
+</style>
+</head>
+<body>
+<script>
+	while(true){	
+		var num=window.prompt("숫자를 한 개 입력하세요.");
+		if (num >= 1 && num <= 9){
+			document.writeln("<h1>"+num+" 단 입니다."+"<hr>");
+			for (let su = 1; su<=9; su++){
+				document.writeln("<h2>"+num+" x "+su+" = "+(num*su)+"<br>");
+			}
+			break;		
+		} 
+	}
+</script>
+</body>
+</html>

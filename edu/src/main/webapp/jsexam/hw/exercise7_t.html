@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./util.js"></script>
+    <script>
+        function calc() {
+            if(!arguments.length) {
+                return 0;
+            }
+            let result = 0;
+
+            for(let i = 0 ; i < arguments.length ; i++) {
+                if(isNaN(arguments[i])) {
+                    return "숫자만 전달하세요.";
+                }
+                result += Number(arguments[i]);
+            }
+            return result;
+        }
+        
+        write(calc(), "h3");
+        write(calc(10, 20, '30'), "h3");
+        write(calc(10, '가나다', 20), "h3");
+        write(calc(1, 2, 3, 4, 5), "h3");
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function write(content, tag) {
+	document.write("<"+tag+">"+content+"</"+tag+">");	
+}
+function writeColor(content, tag, color) {
+	document.write("<"+tag+" style='color:"+color+"'>"+
+			  content+"</"+tag+">");	
+}
+
+function DayInfo(name,year,month,day) {
+	this.name = name;
+	this.year = year;
+	this.month = month;
+	this.day = day;
+}
+
+
+DayInfo.prototype.toString = function(){
+	return `${this.name}(${this.year}/${this.month}/${this.day})`;
+}
+
+DayInfo.prototype.getTotalDates = function(){
+	var date = new Date(this.year, this.month - 1, this.day);
+	var now = new Date();
+	let diff = now.getTime() - date.getTime();
+	diff = Math.ceil(diff / (1000 * 60 * 60 * 24));
+	return this.name+"님은 태어난지 "+diff+"일 되었어요.";
+}
+
+DayInfo.prototype.getKorDay = function() {
+	const days = ["일","월","화","수","목","금","토"];
+	const inputDate = new Date(this.year, this.month - 1, this.day);
+	const dayOfWeek = days[inputDate.getDay()];
+
+	return this.name+"님은 "+dayOfWeek+"요일에 태어났어요.";
+}
+
+const ary = [];
+ary.push(new DayInfo("둘리",1996,11,11));
+ary.push(new DayInfo("또치",1990,10,8));
+ary.push(new DayInfo("도우너",2000,1,4));
+
+for (let key in ary){
+	writeColor(ary[key].getTotalDates(),"h2","blue")
+	writeColor(ary[key].getKorDay(),"h2","red")
+}
+</script>
+</body>
+</html>
