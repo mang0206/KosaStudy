@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CalcServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("CalcServlet 수행~~~~");
 		String q1 = request.getParameter("num1");
 		String q2 = request.getParameter("num2");
 		int num1 = Integer.parseInt(q1);

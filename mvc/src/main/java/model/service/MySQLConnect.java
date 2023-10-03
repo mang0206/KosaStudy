@@ -12,7 +12,7 @@ public class MySQLConnect {
 			return null;
 		} 
 		try {		
-			String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+			String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8";
 			String user = "jdbctest";
 			String passwd = "jdbctest";
 			conn = DriverManager.getConnection(url, user, passwd);						
