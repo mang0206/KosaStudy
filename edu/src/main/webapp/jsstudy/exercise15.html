@@ -14,8 +14,8 @@
 <body>
 <h1>AJAX로 구현하는 오늘의 날씨 정보 - </h1>
 <hr>
-<h3>발표일시 : </h2>
-<h3>온도 : </h2>
+<h3>발표일시 : </h3>
+<h3>온도 : </h3>
 <div id="img_div"></div>
 
 <script>
@@ -43,7 +43,7 @@
         xhr.open("GET", xhr_srf, true);
         xhr.send();
     }
-    window.addEventListener("load", weatherInfo())
+    window.addEventListener("load", weatherInfo)
 </script>
 </body>
 </html>
