@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {
+    text-align: center;
+    font-family : emoji;
+    font-weight: bolder;
+}
+</style>
+</head>
+<body>
+<h1>AJAX로 구현하는 오늘의 날씨 정보 - </h1>
+<hr>
+<h3>발표일시 : </h2>
+<h3>온도 : </h2>
+<div id="img_div"></div>
+
+<script>
+    function weatherInfo(){
+        const xhr = new XMLHttpRequest();
+        const targetH3 = document.getElementsByTagName('h3');
+        const targetDiv = document.getElementById('img_div');
+        console.log()
+        xhr.onload = function() {
+            if (this.status == 200) {
+                let jsonObj = JSON.parse(xhr.responseText);
+                
+                document.getElementsByTagName('h1')[0].innerHTML += jsonObj["wtext"];
+                targetH3[0].innerHTML += jsonObj["time"];
+                targetH3[1].innerHTML += jsonObj["temp"] + "도";
+                
+                const img = document.createElement('img');
+                img.width=300;
+                img.height=300;
+                img.src = `/edu/${jsonObj["img"]}`;
+                targetDiv.appendChild(img); 
+            }
+        }
+        let xhr_srf = `/edu/jsexam/ajaxexam/content/weather.jsp`;
+        xhr.open("GET", xhr_srf, true);
+        xhr.send();
+    }
+    window.addEventListener("load", weatherInfo())
+</script>
+</body>
+</html>

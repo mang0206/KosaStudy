@@ -3,7 +3,7 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <c:catch var="err">
 	<c:import var="weather"
-		url="http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4413325600">
+		url="https://www.weather.go.kr/w/rss/dfs/hr1-forecast.do?zone=1141066000">
 	</c:import>
 	<x:parse varDom="wrss" xml="${weather}"></x:parse>
 
